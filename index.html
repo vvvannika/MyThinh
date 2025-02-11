@@ -1,87 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Capybara Valentine 💚🐹</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #00ff00; /* Green theme */
-      color: #fff;
-      text-align: center;
-      margin: 0;
-      padding: 0;
-      height: 100vh;
-      overflow: hidden;
-    }
-
-    h1 {
-      font-size: 3em;
-      margin-top: 20vh;
-    }
-
-    .heart {
-      font-size: 2em;
-      color: red;
-      animation: float 5s infinite;
-    }
-
-    .capybara-image {
-      width: 250px;
-      margin-top: 20px;
-      animation: capybaraMove 5s infinite alternate;
-    }
-
-    @keyframes float {
-      0% {
-        transform: translateY(0);
-      }
-      100% {
-        transform: translateY(-30px);
-      }
-    }
-
-    @keyframes capybaraMove {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(50px);
-      }
-    }
-
-    .no-button {
-      font-size: 1.5em;
-      background-color: red;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      cursor: pointer;
-      margin-top: 20px;
-      transition: background-color 0.3s;
-    }
-
-    .no-button:hover {
-      background-color: darkred;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine?</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Will You Be My Valentine? 💚🐹</h1>
-  <div class="heart">❤️</div>
-  <img src="capybara.png" alt="Capybara" class="capybara-image">
-  <button class="no-button" onclick="moveNoButton()">No!</button>
+    <div class="container">
+        <h1>Will you be my Valentine? 💚</h1>
+        
+        <!-- Capybara with Heart Stickers -->
+        <div class="capybara-container">
+            <img src="capybara.png" alt="Capybara" class="capybara">
+            <div class="hearts">
+                <span class="heart">❤️</span>
+                <span class="heart">💖</span>
+                <span class="heart">💕</span>
+                <span class="heart">💗</span>
+                <span class="heart">💓</span>
+            </div>
+        </div>
 
-  <script>
-    function moveNoButton() {
-      let button = document.querySelector('.no-button');
-      let randomX = Math.random() * 90 + '%'; // Random position on the screen
-      let randomY = Math.random() * 70 + '%'; // Random position on the screen
-      button.style.position = 'absolute';
-      button.style.left = randomX;
-      button.style.top = randomY;
-    }
-  </script>
+        <div class="buttons">
+            <button id="yes">Yes 💕</button>
+            <button id="no">No 😭</button>
+        </div>
+        <p id="message" class="hidden">Yay! You made the capybara happy! 🥰</p>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
